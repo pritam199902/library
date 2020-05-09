@@ -26,7 +26,7 @@ const mongoose = require('mongoose');
   //   });
 
     mongoose
-      .connect("mongodb://localhost/library", {
+      .connect("mongodb://localhost/library", process.env.DATABASE_URL,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
